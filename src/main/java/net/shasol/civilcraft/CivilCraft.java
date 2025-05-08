@@ -1,5 +1,6 @@
 package net.shasol.civilcraft;
 
+import net.minecraft.world.item.CreativeModeTabs;
 import net.shasol.civilcraft.item.ModItems;
 import org.slf4j.Logger;
 
@@ -46,9 +47,6 @@ public class CivilCraft
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
-        modEventBus.addListener(this::addCreative);
-
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
@@ -69,7 +67,10 @@ public class CivilCraft
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        // TODO: add core items/blocks to creative tab
+        if(event.getTabKey()== CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.COBBER_WIRE_COIL);
+            event.accept(ModItems.ALUMINIUM_WIRE_COIL);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
