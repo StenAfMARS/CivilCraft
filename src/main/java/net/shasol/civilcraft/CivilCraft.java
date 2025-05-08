@@ -1,7 +1,6 @@
-package net.shasol.civilcraft.core;
+package net.shasol.civilcraft;
 
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.capabilities.Capabilities.EnergyStorage;
+import net.shasol.civilcraft.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -24,23 +23,23 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(CivilCraftCore.MODID)
-public class CivilCraftCore
+@Mod(CivilCraft.MODID)
+public class CivilCraft
 {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "civilcraftcore";
+    public static final String MODID = "civilcraft";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public CivilCraftCore(IEventBus modEventBus, ModContainer modContainer)
+    public CivilCraft(IEventBus modEventBus, ModContainer modContainer)
     {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
-//        modEventBus.addListener(this::onRegisterCapabilities);
+        ModItems.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (CivilCraftCore) to respond directly to events.
