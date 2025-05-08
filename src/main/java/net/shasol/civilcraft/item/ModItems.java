@@ -11,6 +11,10 @@ import net.shasol.civilcraft.block.Modblocks;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CivilCraft.MODID);
 
+    //Simple Mod ItemsK
+    public static final DeferredItem<Item> COBBER_WIRE_COIL = ITEMS.registerSimpleItem("cobber_wire_coil");
+    public static final DeferredItem<Item> ALUMINIUM_WIRE_COIL = ITEMS.registerSimpleItem("aluminium_wire_coil");
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
 
