@@ -1,6 +1,8 @@
 package net.shasol.civilcraft;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.shasol.civilcraft.block.Modblocks;
+import net.shasol.civilcraft.item.ModCreativeModeTabs;
 import net.shasol.civilcraft.item.ModItems;
 import org.slf4j.Logger;
 
@@ -39,8 +41,13 @@ public class CivilCraft
     {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
+        // Register mod Items
         ModItems.register(modEventBus);
+        // Register Mod Blocks
+        Modblocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (CivilCraftCore) to respond directly to events.
@@ -67,10 +74,10 @@ public class CivilCraft
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if(event.getTabKey()== CreativeModeTabs.INGREDIENTS){
-            event.accept(ModItems.COBBER_WIRE_COIL);
-            event.accept(ModItems.ALUMINIUM_WIRE_COIL);
-        }
+//        if(event.getTabKey()== CreativeModeTabs.INGREDIENTS){
+//            event.accept(ModItems.COBBER_WIRE_COIL);
+//            event.accept(ModItems.ALUMINIUM_WIRE_COIL);
+//        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

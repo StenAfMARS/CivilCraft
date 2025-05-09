@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "civilcraft:block/bauxite_ore_block"
+  }
+}
