@@ -14,8 +14,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ModItems.RAW_BAUXITE_ORE.get());
-        basicItem(ModItems.COBBER_WIRE_COIL.get());
-        basicItem(ModItems.COBBER_FINE_WIRE_COIL.get());
+        basicItem(ModItems.COPPER_WIRE_COIL.get());
+        basicItem(ModItems.COPPER_FINE_WIRE_COIL.get());
         basicItem(ModItems.ALUMINIUM_WIRE_COIL.get());
         basicItem(ModItems.ALUMINIUM_FINE_WIRE_COIL.get());
 

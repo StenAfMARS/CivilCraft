@@ -21,11 +21,11 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModItems.ALUMINIUM_WIRE_COIL.get()))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItems.ALUMINIUM_WIRE_COIL);
-                        pOutput.accept(ModItems.COBBER_WIRE_COIL);
+                        pOutput.accept(ModItems.COPPER_WIRE_COIL);
                         pOutput.accept(ModItems.RAW_BAUXITE_ORE);
                         pOutput.accept(Modblocks.BAUXITE_ORE_BLOCK);
                         pOutput.accept(ModItems.ALUMINIUM_FINE_WIRE_COIL);
-                        pOutput.accept(ModItems.COBBER_FINE_WIRE_COIL);
+                        pOutput.accept(ModItems.COPPER_FINE_WIRE_COIL);
 
 
                     }).build());

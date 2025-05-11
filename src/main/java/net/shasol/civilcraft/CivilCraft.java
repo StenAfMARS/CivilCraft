@@ -73,7 +73,7 @@ public class CivilCraft
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
 //        if(event.getTabKey()== CreativeModeTabs.INGREDIENTS){
-//            event.accept(ModItems.COBBER_WIRE_COIL);
+//            event.accept(ModItems.COPPER_WIRE_COIL);
 //            event.accept(ModItems.ALUMINIUM_WIRE_COIL);
 //        }
     }
