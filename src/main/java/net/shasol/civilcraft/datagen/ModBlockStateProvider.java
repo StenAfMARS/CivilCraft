@@ -17,6 +17,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
     @Override
     protected void registerStatesAndModels() {
         blockWithItem(Modblocks.BAUXITE_ORE_BLOCK);
+//        blockWithItem(Modblocks.COBALT_ORE_BLOCK);
+//        blockWithItem(Modblocks.NICKEL_ORE_BLOCK);
+//        blockWithItem(Modblocks.REO_ORE_BLOCK);
     }
 
     private void blockWithItem(DeferredBlock<Block> deferredBlock) {

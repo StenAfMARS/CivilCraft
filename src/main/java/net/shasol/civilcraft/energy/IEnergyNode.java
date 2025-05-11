@@ -1,28 +1,21 @@
 package net.shasol.civilcraft.energy;
 
 public interface IEnergyNode {
-    /**
-     * Called every tick to allow the node to inject or consume power.
-     */
-    void tick(EnergyNetwork network);
+    /** Called once per tick; return the packet you wish to inject (source) or null. */
+    default EnergyPacket tickEmit(EnergyNetwork network) { return null; }
 
-    /**
-     * Resistance (Ω) of the node (for wires, transformers, etc).
-     */
+    /** Called when this node receives power from the network. */
+    default void receive(EnergyPacket packet) { }
+
+    /** Resistance (Ω) of the node itself (e.g. transformer winding). */
     double getResistance();
 
-    /**
-     * Returns the maximum current (in amps) the node can handle.
-     */
+    /** Maximum current (A) this node can handle. */
     double getMaxCurrent();
 
-    /**
-     * Is this node a source (e.g., generator)?
-     */
+    /** True if this node can generate power. */
     default boolean isSource() { return false; }
 
-    /**
-     * Is this node a sink (e.g., consumer)?
-     */
+    /** True if this node can consume power. */
     default boolean isSink() { return false; }
 }

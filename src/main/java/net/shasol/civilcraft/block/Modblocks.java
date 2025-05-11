@@ -18,6 +18,15 @@ public class Modblocks {
     public static final DeferredBlock<Block> BAUXITE_ORE_BLOCK =
             registerBlock("bauxite_ore_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
 
+//    public static final DeferredBlock<Block> COBALT_ORE_BLOCK =
+//            registerBlock("cobalt_ore_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+//
+//    public static final DeferredBlock<Block> NICKEL_ORE_BLOCK =
+//            registerBlock("nickel_ore_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+//
+//    public static final DeferredBlock<Block> REO_ORE_BLOCK =
+//            registerBlock("reo_ore_block", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+
     public static <T extends Block>DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

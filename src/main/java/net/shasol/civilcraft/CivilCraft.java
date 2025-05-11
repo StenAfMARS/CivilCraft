@@ -1,8 +1,6 @@
 package net.shasol.civilcraft;
 
-import net.minecraft.world.item.CreativeModeTabs;
 import net.shasol.civilcraft.block.Modblocks;
-import net.shasol.civilcraft.item.ModCreativeModeTabs;
 import net.shasol.civilcraft.item.ModItems;
 import org.slf4j.Logger;
 

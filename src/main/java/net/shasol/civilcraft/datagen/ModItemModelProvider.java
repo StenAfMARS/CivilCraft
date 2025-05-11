@@ -15,7 +15,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         basicItem(ModItems.RAW_BAUXITE_ORE.get());
         basicItem(ModItems.COBBER_WIRE_COIL.get());
+        basicItem(ModItems.COBBER_FINE_WIRE_COIL.get());
         basicItem(ModItems.ALUMINIUM_WIRE_COIL.get());
+        basicItem(ModItems.ALUMINIUM_FINE_WIRE_COIL.get());
+
 
     }
 

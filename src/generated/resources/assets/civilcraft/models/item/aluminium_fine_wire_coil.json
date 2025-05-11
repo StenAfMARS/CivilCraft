@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "civilcraft:item/aluminium_fine_wire_coil"
+  }
+}

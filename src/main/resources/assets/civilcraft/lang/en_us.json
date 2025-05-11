@@ -1,7 +1,11 @@
 {
-  "itemGroup.civilcraft.civilcraft_creative_tab": "Civil Craft ",
+  "itemGroup.civilcraft.civilcraft_creative_tab": "Civil Craft",
   "item.civilcraft.cobber_wire_coil": "Cobber Wire Coil",
   "item.civilcraft.aluminium_wire_coil": "Aluminium Wire Coil",
+  "item.civilcraft.cobber_fine_wire_coil": "Cobber Wire Coil",
+  "item.civilcraft.aluminium_fine_wire_coil": "Fine Aluminium Wire",
+  "item.civilcraft.cobber_fine_wire_coil": "Fine cobber Wire",
+
   "item.civilcraft.raw_bauxite_ore": "Raw Bauxite",
 
   "block.civilcraft.bauxite_ore_block": "Bauxite Ore Block"
